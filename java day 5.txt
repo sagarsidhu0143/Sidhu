@@ -1,0 +1,195 @@
+java day5:
+-------------------------------
+if else
+switch
+while loop
+forloop
+break/continue
+---------------------------------------------
+1) if else program format : w3school 
+----------------------------------------------
+public class Testcone {
+
+	public static void main(String[] args) {
+		
+int x = 70;
+int y = 80;
+
+if(x <= y) 
+{
+	System.out.println("x is greater than y");
+}
+
+else
+{
+   System.out.println("vidyasagar");
+}	
+	
+--------------------------------------------------------------------------
+2) switch :
+------------
+package com.java;
+
+class Student3
+{
+	public static void main (String [] args) 
+	{
+		int day = 6;
+		switch (day)
+		
+		{
+		case 1 :
+			System.out.println("sunday");
+			break;
+		case 2 :
+			System.out.println("monday");
+			break;
+		case 3 :
+			System.out.println("thusday");
+			break;
+		case 4 : 
+			System.out.println("wednesday");
+			break;
+		case 5 :
+			System.out.println("thursday");
+			break;
+		case 6 :
+			System.out.println("friday");
+            break;
+		case 7 :
+			System.out.println("satday");
+    }
+	}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}
+-------------------------------------------------------
+package com.java;
+
+public class Testctwo {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 101 ; i++) 
+		{
+		  if(i%2 == 0)	even print ifi%2!=0)]>>>>>.... odd 
+		  {
+			  System.out.println(i);	
+		  }
+		
+		}
+
+	}
+
+}
+-------------------------------------------
+package com.java;
+
+public class Testctwo {
+
+
+	public static void main(String[] args) {
+		for (int i = 1; i < 100 ; i++) 
+		{
+		  if((i%5 == 0)	&& (i%7 == 0))
+		  {
+			  System.out.println(i);	
+		  }
+		
+		}
+
+	}
+
+}
+==============================
+///////////////String
+package com.java;
+
+public class Testctwo {
+
+
+	public static void main(String[] args) {
+		String s = "sagar";
+		char[] ch = s.toCharArray();
+		
+		for(int i = s.length()-1; i>=0;i--)
+		{
+			System.out.println(ch[i]);
+		}
+		
+
+
+	}
+
+}
+-----------------------------------
+
+vowels :
+-------------
+	public static void main(String[] args) {
+		String s = "sagar";
+		char[] ch = s.toCharArray();
+		
+		for(int i =0; i<s.length();i++)
+		{
+			if(!(ch[i] == 'a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u'))
+			{
+				System.out.println(ch[i]);
+			}
+			
+		}
+		
+			
+		
+
+
+	}
+
+}
+
+=========================package com.java;
+//Integer array
+public class Testctwo {
+
+
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5};
+		
+		for(int i = a.length-1; i >= 0 ;i--)
+		{
+			System.out.println(a[i]);
+		}
+		
+		
+		
+
+
+	}
+
+}
+---------------------------------
+package com.java;
+
+public class Testctwo {
+
+
+	public static void main(String[] args) {
+		int[] i = {1,2,3,4,5,6,7,8,9,10};
+		for(int j = 0; j<i.length;j++) 
+		{
+		 System.out.println(i[j]);	
+		}
+
+
+	}
+
+}
+-----------------------------------------------

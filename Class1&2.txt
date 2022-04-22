@@ -1,0 +1,50 @@
+webelement name = "//input[@id='firstName']"
+webelement lastname = "//input[@id='lastName']"
+webelement email = "//input[@id='userEmail']"
+webelemnt mobile num = "//input[@placeholder='Mobile Number']"
+webelemnt DOB = "//input[@id='dateOfBirthInput']"
+===============================================================================
+https://demoqa.com/text-box
+=============================================================================
+//button[text()='Double Click Me']
+=======================================================================
+text box:
+webelement name = "//input[@id='userName']"
+webelement email = "//input[@id='userEmail']"
+webelement curenetadd = "//textarea[@id='currentAddress']"
+webelemnt perminantadd = "//textarea[@id='permanentAddress']"
+
+
+
+
+====================================================================
+buttons:
+webelement submitt = "//button[text()='Submit']"
+
+webelement doubleclickme = "//button[text()='Double Click Me']" 
+webelement rightclick = "//button[text()='Right Click Me']"
+============================================================================
+class 2 
+https://learn-automation.com/how-to-write-dynamic-xpath-in-selenium/
+
+//div[@id='userEmail-wrapper']//label/parent::div------parent 
+//div[@id='userEmail-wrapper']//label/ancestor::div[1]--------up 1step 
+//div[@id='userEmail-wrapper']//label/ancestor::div[2]--------up 2steps 
+-----------------------------------------------------------------------------
+//div[@id='userEmail-wrapper']/div----------------1step down 
+//div[@id='userEmail-wrapper']//label -------------2steps down 
+-------------------------------------------------------------------------------
+
+(//a[text()='Home'])[2]
+
+
+dynamic using static referance 
+//label[text()='Current Address']/parent::div/following-sibling::div/textarea
+------------------------------------------------------------------------------------------
+//label[text()='Full Name']/parent::div/following-sibling::div/input--------------------------fpllowing-sibling 
+//button[contains(text(),'Double Click Me')]----------------button contain text 
+//button[contains(text(),'Right Click Me')]---------------- right click me 
+
+
+
+

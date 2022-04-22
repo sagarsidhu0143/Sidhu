@@ -1,0 +1,71 @@
+check box x path  imp:
+----------------------------------
+1) https://cosmocode.io/automation-practice-webtable/
+--------------------------------------------------------
+///table[@id='countries']/tbody/tr/td[2]/strong
+ //table[@id='countries']/tbody//td/strong[text()='india']/parent::td/preceding-sibling::td/input
+--------------------------------------------------------------------------------------
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://cosmocode.io/automation-practice-webtable/");
+	List<WebElement> allCountries =driver.findElements(By.xpath("//table[@id='countries']/tbody/tr/td[2]/strong"));
+	{
+		for(WebElement ele:allCountries) 
+		{
+			String s = ele.getText();
+			if(s.equals("India"))
+			{
+			 driver.findElement(By.xpath("//table[@id='countries']/tbody//td/strong[text()='"+s+"']/parent::td/preceding-sibling::td/input")).click();
+			}
+			
+		}
+		
+	}
+		
+}
+}
+	
+
+
+
+
+----------------------------------------
+2) https://testuserautomation.github.io/WebTable/
+//table/tbody/tr//td[2]
+//table/tbody/tr//td[text()='Will']/preceding-sibling::td/input
+
+---------------------------------------
+
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://testuserautomation.github.io/WebTable//");
+	List<WebElement> allCountries =driver.findElements(By.xpath("//table/tbody/tr//td[2]"));
+	{
+		for(WebElement ele:allCountries) 
+		{
+			String s = ele.getText();
+			if(s.equals("Will"))
+			{
+			 driver.findElement(By.xpath("//table/tbody/tr//td[text()='Will']/preceding-sibling::td/input")).click();
+			}
+			
+		}
+		
+	}
+		
+}
+}
+	
+
+===========
+1. Euro corresponding checkbox
+2. English corresponding checkbox
+3. Wilcox corresponding checkbox

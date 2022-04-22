@@ -1,0 +1,33 @@
+Select select = new Select(driver.findElement(By.id("oldSelectMenu")));
+select.selectByVisibleText("Magenta");
+
+
+click on "clik me"
+Alert alert = driver.switchTo().alert();
+alert.accept();
+
+date sendkeys
+
+5 dropdowns
+
+get text of Message_12
+get text of Message#### 1234567
+
+
+=============================
+
+serach box = mobile
+s1 = getText() of crossed price
+s2 = getText() of actual price
+int discount;
+discount = (s1-s2)/s1;
+s3 = getText() of discount
+
+if(discount.equals(s3))
+{
+Syso("ok");
+}
+else
+{
+Syso("not ok");
+}

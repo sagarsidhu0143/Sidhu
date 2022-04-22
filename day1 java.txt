@@ -1,0 +1,116 @@
+1) Byte:
+
+class Test
+{
+   public static void main(string[]  args)
+   {
+      byte vidyaSagar=123;
+      System.out.println(vidyaSagar)
+	  
+   }
+}
+------------------------------------------------------------
+2) Short:
+class Test
+{
+piblic static void main (string[] args)
+{
+  short pawanKalyan = 9999;
+  system.out.println(pawanKalyan)
+  
+ }  
+}
+-----------------------------------------------------
+3)int :
+class Test
+{
+public static void main (string[] args)
+{
+int sagar = 9573731288;
+system.out.println(sagar)
+
+}
+}
+-------------------------------------------------------------
+14)all the elements 
+class Test  
+{
+public static void main ( string[] args)
+{
+int a = 10;
+int b = 20;
+System.out.println(a+b);
+System.out.println(a-b);
+System.out.println(a*b);
+System.out.println(a/b);
+Systclem.out.println(a%b);
+
+
+}
+
+}
+------------------------------------------------------------
+4)LONG:
+class Test
+{
+public static void main ( string[] args)
+{
+long a = 12345678966477
+system.out.println(a);
+
+
+}
+}
+------------------------------------------------------------
+5)FLOAT:
+class Test
+{
+public static void main( string[] args)
+{
+float a = 10.9;
+float b = 99.9;
+system.out.println(a+b);
+
+}
+
+}
+------------------------------------------------------------------
+6)DOUBLE:
+class Test
+{
+public static void main( string[] args)
+{
+double a = 1234.667;
+double b = 5778.999;
+system.out.println(a-b);
+
+}
+
+}
+-------------------------------------------------------------------------
+7)CHAR:
+class Test
+{
+public static void main ( string[] args)
+{
+char1 ='vidyasagar';
+char2 ='9573731288';
+system.out.println('char1');
+system.out.println('char2');
+
+}
+}
+------------------------------------------------------
+11)String:
+
+class Test
+{
+public static void main( string[] args)
+{
+string1 = "vidyasagar"
+string2 = "bhukya"
+sysytem.out.prinln("srting1")
+system.out.println("string2")
+}
+}
+------------------------------------------------

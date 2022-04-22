@@ -1,0 +1,83 @@
+Salenium practice all includes :
+---------------------------------
+http://testautomationpractice.blogspot.com/
+-----------------------------------------------
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.switchTo().frame("frame-one1434677811");
+		driver.findElement(By.id("RESULT_TextField-1")).sendKeys("sagar");
+        driver.findElement(By.id("RESULT_TextField-3")).sendKeys("9573731288");
+        driver.findElement(By.id("RESULT_TextField-4")).sendKeys("india");
+        driver.findElement(By.id("RESULT_TextField-5")).sendKeys("Hyderabd");
+        driver.findElement(By.id("RESULT_TextField-6")).sendKeys("vidyasagar1288");
+        driver.findElement(By.xpath("//label[contains(text(),'Male')]")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Tuesday')]")).click();
+        Thread.sleep(5000);
+       Select se = new Select (driver.findElement(By.xpath("//select[@id='RESULT_RadioButton-9']")));
+       se.selectByVisibleText("Evening");
+       String s = driver.findElement(By.xpath("//a[contains(text(),'Software Testing Tutorials')]")).getText();
+       System.out.println(s);
+       String s1 =    driver.findElement(By.xpath("//a[contains(text(),'Software Testing Tools Training')]")).getText();
+       System.out.println(s1);
+       driver.switchTo().defaultContent();
+       Thread.sleep(2000);
+       driver.findElement(By.xpath("//button[contains(text(),'Click Me')]")).click();
+       Alert alert = driver.switchTo().alert();
+       alert.accept();
+       driver.findElement(By.xpath("//input[@id='datepicker']")).sendKeys("01-12-2021");
+       driver.findElement(By.xpath("//input[@id='datepicker']")).sendKeys(Keys.ENTER);
+       Thread.sleep(2000);
+       Select se1 = new Select(driver.findElement(By.xpath("//select[@id='speed']")));
+       se1.selectByIndex(2);
+       Select se2 = new Select(driver.findElement(By.xpath("//select[@id='files']")));
+       se2.selectByIndex(2);
+       Select se3 = new Select(driver.findElement(By.xpath("//select[@id='animals']")));
+       se3.selectByIndex(1);		
+      String s2 = driver.findElement(By.xpath("//span[contains(text(),'Message_12')]")).getText();
+      System.out.println(s2);
+      String s3 = driver.findElement(By.xpath("//span[contains(text(),'Message#### 1234567')]")).getText();
+      System.out.println(s3);
+      
+    		   
+       
+		
+		
+		
+		
+	
+		
+	}
+		
+}
+
+	
+
+
+
+

@@ -1,0 +1,90 @@
+java class 3: constructor
+-----------------------------------------
+https://www.javatpoint.com/java-constructor
+---------------------------------------------
+//Let us see another example of default constructor  
+//which displays the default values  
+class Student3{  
+int id;  
+String name;  
+//method to display the value of id and name  
+void display(){System.out.println(id+" "+name);}  
+  
+public static void main(String args[]){  
+//creating objects  
+Student3 s1=new Student3();  
+Student3 s2=new Student3();  
+//displaying values of the object  
+s1.dsplay();  
+s2.display();  
+}  
+}  
+--------------------------------------------------
+package com.java;
+
+ class Student3
+{
+	int id;
+	String name;
+	
+	Student3(int i,String n) 
+	{
+	id = i;
+	name = n;
+	}
+	
+	void display()
+	{
+		System.out.println(id+" "+name);
+	}
+	
+	public static void main (String[] args)
+		{
+		Student3 s1 = new Student3(1111, "sagar");
+		Student3 s2 = new Student3(6666,"pawan");
+		s1.display();
+		s2.display();
+		}
+		
+	}
+
+
+
+package com.java;
+
+ class Student3
+{
+	public static void main(String[] args)
+	{
+	 String[] movies = {"akhand","bnayak","rahstam","rrr"};
+	 System.out.println(movies[0]);
+	 System.out.println(movies[1]);
+	 System.out.println(movies[2]);
+	 System.out.println(movies[3]);
+	 System.out.println(movies.length);
+	 System.out.println(movies[4]);
+	}
+}
+--------------------------------------------------
+ackage com.java;
+
+import java.util.Arrays;
+
+class Student3
+{
+	public static void main(String[] args)
+	{
+	 int[] p = {2,7,5,11,9,17};
+	 System.out.println(p[0]);
+	 System.out.println(p[1]);
+	 System.out.println(p[2]);
+	 System.out.println(p[3]);
+	 System.out.println(p.length);
+	 Arrays.sort(p);
+	 System.out.println(p[0]);
+	 System.out.println(p[p.length-1]);
+
+	}
+}
+-------------------------------------------------
+	

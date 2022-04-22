@@ -1,0 +1,65 @@
+java day4: String:
+-----------------------
+https://firozstar.tripod.com/_darksiderg.pdf
+-----------------------------
+■ charAt() Returns the character located at the specified index
+■ concat() Appends one String to the end of another ( "+" also works)
+■ equalsIgnoreCase() Determines the equality of two Strings, ignoring case
+■ length() Returns the number of characters in a String
+■ replace() Replaces occurrences of a character with a new character
+■ substring() Returns a part of a String
+■ toLowerCase() Returns a String with uppercase characters converted
+■ toString() Returns the value of a String
+■ toUpperCase() Returns a String with lowercase characters converted
+■ trim() Removes whitespace from the ends of a String
+-----------------------------------------------------------------------------------------
+1)charAt():
+
+class charAt
+{
+public static void main (String[] args)
+{
+String x = "vidyasgar";
+System.out.println(x.charAt(3));
+}
+}
+//o/p:y
+---------------------------------------------------------------
+2)replace:
+class Replace
+{
+public static void main (String[] args)
+{
+String x = "vidyasgar";
+System.out.println(x.replace('a','s'))
+}
+}
+//o/p: vidyssgsr
+------------------------------------------------------------
+3)Substring:
+class Substring
+{
+public static void main (String[] args)
+{
+String x = "0123456789";
+System.out.prinln(x.substring(6));    >>>>>>>>>>> o/p 6789
+System.out.prinln(x.sbstring( 4, 9))  >>>>>>>>>>> o/p 45678
+} 
+}
+--------------------------------------------------------
+4)Trim:
+class Trim
+{
+piblic static void main(String[] args) 
+{
+String x = "     hi ";
+system.out.println(x + "x")  >>>>>>>>>> "     hi x"
+system.out.prinln(x.term() + "x") >>>>>>>>>>> hix
+}
+}
+-------------------------------------------------------------
+
+
+---------------------------------------------------------------
+}
+}

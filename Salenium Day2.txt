@@ -1,0 +1,31 @@
+Salenium Day2:
+---------------
+
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://demoqa.com/automation-practice-form");
+		driver.manage().window().maximize();
+		driver.findElement(By.id("firstName")).sendKeys("vidya sagar");
+		driver.findElement(By.id("lastName")).sendKeys("bhukya");
+		driver.findElement(By.id("userEmail")).sendKeys("vidyasagar1288");
+		driver.findElement(By.xpath("//label[contains(text(),'Male')]")).click();
+		driver.findElement(By.xpath("//input[@id='userNumber']")).sendKeys("9573731288");
+		Thread.sleep(3000);
+		//driver.findElement(By.id("dateOfBirthInput")).clear();
+		//driver.findElement(By.id("dateOfBirthInput")).sendKeys("11 Dec 2021");
+		driver.findElement(By.id("subjectsInput")).sendKeys("hello");
+		driver.findElement(By.xpath("//label[contains(text(),'Music')]")).click();
+		driver.findElement(By.id("currentAddress")).sendKeys("kothagudem,khammam,hyderabad");
+		driver.findElement(By.id("submit")).submit();
+       
+            }
+        
+    }	
+	
+	
+	
+

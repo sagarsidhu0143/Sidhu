@@ -1,0 +1,176 @@
+1)Launch Chrome Browser:
+------------------------
+WebDriver driver = new ChromeDriver();
+=============================================================================================
+2)Input Text:
+----------------
+driver.findElement(By.xpath("").sendkeys();
+==============================================================================================
+3)Clear();
+-----------
+driver.findElement(By.xpath("").click();
+===============================================================================================
+4)getText();
+------------
+String s = driver.findElement(By.id("")).getText();
+System.out.println(s);
+===============================================================================================
+5)getattribute();
+-----------------
+String a = driver.findElement(By.name("").getattribute("enter needed value");
+System.out.println(a);
+===============================================================================================
+6)Hypertextlink:
+----------------
+driver.findElement(By.link("")).click();
+===============================================================================================
+7)submit();
+-----------------
+driver.findElement(By.xpath("").submit();
+================================================================================================
+8)press enter keys :
+------------------
+driver.findElement(By.id("").sendKeys(keys.ENTER);
+================================================================================================
+9)pause:
+--------
+Thread.sleep(5000);
+================================================================================================
+10)geturl:
+-----------
+method1): driver.get("www.fb/amazone/insta")
+method2): driver.navigate.to("url");
+================================================================================================
+11)forward:
+-------------
+driver.navigate().forward();
+================================================================================================
+12)backword:
+-------------
+driver.navigate().back();
+=================================================================================================
+13)Refresh page:
+----------------
+driver.navigate.refresh();
+================================================================================================
+14)current url();
+--------------------
+driver.getcurrenturl();
+===============================================================================================
+15)maximize:
+--------------
+driver.manage().windows().maximize();
+===============================================================================================
+17)delet cookies:
+-----------------
+driver.manage().deletAllCookies();
+===============================================================================================
+18)windowhandle:
+-----------------
+driver.getwindowHandle();
+==============================================================================================
+19)current webdriver close:
+-----------------------------
+driver.close();
+==============================================================================================
+20)close all webdriver:
+-----------------------
+driver.quit();
+===============================================================================================
+21)isDisplayed()
+------------------
+boolean Status = driver.findElemnt(By.xpath("").isDisplayed();
+===============================================================================================
+22)isSelected()
+------------------
+boolena Status = driver.findEleemnt(By.xpath("")).isSelected();
+===============================================================================================
+23)isEnabled();
+-----------------
+boolean Status = driver.findElement(By.id("").isEnabled();
+===============================================================================================
+24)dropdown()
+---------------
+Select s = newSelect driver.findElent(By.xpath(""));
+s.selectByvisibleTest();
+select s = new select();
+driver.findElement(by.xpath(""));
+s.selectByindex();
+select s = new select ();
+driver.findelement(By.xpath(""));
+s.selectByvalue();
+----------------------------------
+Expl real work observe:
+ Select se1 = new Select(driver.findElement(By.xpath("//select[@id='speed']")));
+       se1.selectByIndex(2);
+       Select se2 = new Select(driver.findElement(By.xpath("//select[@id='files']")));
+       se2.selectByIndex(2);
+       Select se3 = new Select(driver.findElement(By.xpath("//select[@id='animals']")));
+       se3.selectByIndex(1);
+=================================================================================================
+25)Screenshot:
+-----------------
+file Screenshotfile = ((TakeScreenshot)driver).getScreenshotas(Output.File);
+file utils.copyfile(Screenshotfile,newfile("filename with path"));
+-------------------------------------------
+Example real :
+	
+        File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(src, new File("C:/Screenshots/error4.png"));
+==================================================================================================
+26)Mousehover:
+-----------------
+Action action = new Action (driver);
+driver.findElement(By.xpath("");
+Action.moveToelement(ele).perform();
+-------------------------------------
+WebElement ele = driver.findElement(By.xpath(""));
+Action action = new Action(driver);
+action.mouseToElement(ele).perform();
+Example observe:
+---------------
+
+                WebElement mainMenu = driver.findElement(By.xpath("//b[text()='Time']"));
+		WebElement chaildMenu = driver.findElement(By.xpath("//a[@id='menu_attendance_Attendance']"));
+		WebElement subMenu = driver.findElement(By.xpath("//a[@id='menu_attendance_viewMyAttendanceRecord']"));
+		
+		//Instantiating Actions class
+		Actions actions = new Actions(driver);
+
+		//Hovering on main menu
+		actions.moveToElement(mainMenu);
+		actions.moveToElement(chaildMenu);
+		actions.moveToElement(subMenu);
+		actions.click().build().perform();  
+		driver.findElement(By.xpath("//b[text()='Time']")).clear();
+		driver.findElement(By.xpath("//input[@id='attendance_date']")).sendKeys("2021-12-12");
+===========================================================================================================
+27)Popup:
+----------
+dismiss();  >>> To click cancelbutton
+accept();   >>> click ok button 
+getText();
+Alert alert = driver.SwitchTo().alert(); 
+alert.accept();
+aler.dismiss();
+alert.getTest();
+========================================================================================================
+28)Waits:
+-------
+Static wait : Thread.sleep(5000);
+-----------
+Dynamic wait:
+-----------
+Implicit: driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+---------------
+Explicit: WebDriverWait wait = new WebDriverWait(driver,30);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'COMPOSE')]")));
+---------------
+FluentWait:
+FluentWait wait = new FluentWait(driver);
+wait.withTimeout(5000, TimeUnit.MILLISECONDS);
+wait.pollingEvery(250, TimeUnit.MILLISECONDS);
+wait.ignoring(NoSuchElementException.class)
+wait.until(ExpectedConditions.alertIsPresent());
+
+

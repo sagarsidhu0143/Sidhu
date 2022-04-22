@@ -1,0 +1,79 @@
+   Salenium Day3:
+------------------------------------
+     Screenshot capture:
+        File src4= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(src4, new File("C:/Screenshots/error4.png"));
+------------------------------------------------------------------------------
+mousehour:
+--------
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
+		driver.manage().window().maximize();
+
+		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+		driver.findElement(By.id("btnLogin")).click();
+		/*
+	       driver.findElement(By.xpath("//a[@id='menu_leave_viewLeaveModule']")).click();
+	       driver.findElement(By.xpath("//a[@id='menu_leave_viewMyLeaveList']")).click();*/
+      
+		WebElement mainMenu = driver.findElement(By.xpath("//b[text()='Time']"));
+		WebElement chaildMenu = driver.findElement(By.xpath("//a[@id='menu_attendance_Attendance']"));
+		WebElement subMenu = driver.findElement(By.xpath("//a[@id='menu_attendance_viewMyAttendanceRecord']"));
+		
+		//Instantiating Actions class
+		Actions actions = new Actions(driver);
+
+		//Hovering on main menu
+		actions.moveToElement(mainMenu);
+		actions.moveToElement(chaildMenu);
+		actions.moveToElement(subMenu);
+		actions.click().build().perform();  
+		driver.findElement(By.xpath("//b[text()='Time']")).clear();
+		driver.findElement(By.xpath("//input[@id='attendance_date']")).sendKeys("2021-12-12");
+		
+        File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(src, new File("C:/Screenshots/error4.png"));
+        		
+        
+            }
+        
+    }	
+	--------------------------------------------------------------------------------------
+
+
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://demoqa.com/frames");
+        
+        //Locating frame1 using its id
+        WebElement frame1=driver.findElement(By.id("frame1"));
+        
+        //Switching the WebDriver context to frame1
+        driver.switchTo().frame(frame1);
+        
+        //Identifying the frame heading in a WebElement
+        WebElement frame1Heading= driver.findElement(By.id("sampleHeading"));
+        
+        //Finding the text of the frame1 heading
+        String frame1Text=frame1Heading.getText();
+        
+        //Print the heading
+        System.out.println("Text of the frame1 heading is:"+frame1Text);
+        
+        //closing the driver
+        driver.close();
+}
+
+	
+	
+        		

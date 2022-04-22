@@ -1,0 +1,189 @@
+java day 6:
+------------------------------
+OOPS:
+-------------------------------
+Simple Example of Encapsulation in Java:
+-------------------------------------------------------
+package com.javatpoint;  
+public class Student{  
+//private data member  
+private String name;  
+//getter method for name  
+public String getName(){  
+return name;  
+}  
+//setter method for name  
+public void setName(String name){  
+this.name=name  
+}  
+}  
+File: Test.java
+
+//A Java class to test the encapsulated class.  
+package com.javatpoint;  
+class Test{  
+public static void main(String[] args){  
+//creating instance of the encapsulated class  
+Student s=new Student();  
+//setting value in the name member  
+s.setName("vijay");  
+//getting value of the name member  
+System.out.println(s.getName());  
+}  
+}  
+Compile By: javac -d . Test.java
+Run By: java com.javatpoint.Test
+
+Output:vijay
+----------------------------------------------------------------------------------------
+EXAMPLE2:
+----------------
+class Account {  
+//private data members  
+private long acc_no;  
+private String name,email;  
+private float amount;  
+//public getter and setter methods  
+public long getAcc_no() {  
+    return acc_no;  
+}  
+public void setAcc_no(long acc_no) {  
+    this.acc_no = acc_no;  
+}  
+public String getName() {  
+    return name;  
+}  
+public void setName(String name) {  
+    this.name = name;  
+}  
+public String getEmail() {  
+    return email;  
+}  
+public void setEmail(String email) {  
+    this.email = email;  
+}  
+public float getAmount() {  
+    return amount;  
+}  
+public void setAmount(float amount) {  
+    this.amount = amount;  
+}  
+  
+}  
+File: TestAccount.java
+
+
+//A Java class to test the encapsulated class Account.  
+public class TestEncapsulation {  
+public static void main(String[] args) {  
+    //creating instance of Account class  
+    Account acc=new Account();  
+    //setting values through setter methods  
+    acc.setAcc_no(7560504000L);  
+    acc.setName("Sonoo Jaiswal");  
+    acc.setEmail("sonoojaiswal@javatpoint.com");  
+    acc.setAmount(500000f);  
+    //getting values through getter methods  
+    System.out.println(acc.getAcc_no()+" "+acc.getName()+" "+acc.getEmail()+" "+acc.getAmount());  
+}  
+}  
+Test it Now
+Output:
+
+7560504000 Sonoo Jaiswal sonoojaiswal@javatpoint.com 500000.0
+----------------------------------------------------------------------
+Java Inheritance (Subclass and Superclass):
+https://www.javatpoint.com/inheritance-in-java
+https://www.w3schools.com/java/java_inheritance.asp
+------------------------------------------
+subclass (child) - the class that inherits from another class
+superclass (parent) - the class being inherited from
+To inherit from a class, use the extends keyword.
+-------------------------------------------------------------------
+
+Example
+class Vehicle {
+  protected String brand = "Ford";        // Vehicle attribute
+  public void honk() {                    // Vehicle method
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";    // Car attribute
+  public static void main(String[] args) {
+
+    // Create a myCar object
+    Car myCar = new Car();
+
+    // Call the honk() method (from the Vehicle class) on the myCar object
+    myCar.honk();
+
+    // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+O/P:Tuut, tuut!
+Ford Mustang
+----------------------------------------------------------------------------------------------------
+EXAPLE2:
+--------------
+class Employee{  
+ float salary=40000;  
+}  
+class Programmer extends Employee{  
+ int bonus=10000;  
+ public static void main(String args[]){  
+   Programmer p=new Programmer();  
+   System.out.println("Programmer salary is:"+p.salary);  
+   System.out.println("Bonus of Programmer is:"+p.bonus);  
+}  
+}  
+Test it Now
+ Programmer salary is:40000.0
+ Bonus of programmer is:10000
+------------------
+SINGLE : Inheritance
+--------------------
+
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class TestInheritance{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.bark();  
+d.eat();  
+}}  
+Output:
+
+barking...
+eating...
+------------------------
+Multilevel Inheritance Example:
+-------------------------------
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class BabyDog extends Dog{  
+void weep(){System.out.println("weeping...");}  
+}  
+class TestInheritance2{  
+public static void main(String args[]){  
+BabyDog d=new BabyDog();  
+d.weep();  
+d.bark();  
+d.eat();  
+}}  
+Output:
+
+weeping...
+barking...
+eating...
+---------------------------------------------------------------------

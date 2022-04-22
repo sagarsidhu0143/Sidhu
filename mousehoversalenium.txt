@@ -1,0 +1,54 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class Fristsale {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtUsername")).sendKeys("admin");
+		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+		driver.findElement(By.id("btnLogin")).click();
+	    WebElement b1 = driver.findElement(By.xpath("//b[text()='Admin']"));	
+	    WebElement b2 = driver.findElement(By.xpath("//a[contains(text(),'User Management')]"));
+	    WebElement b3 = driver.findElement(By.xpath("//a[contains(text(),'Users')]"));
+	    Actions actions = new Actions(driver);
+	    actions.moveToElement(b1);
+	    actions.moveToElement(b2);
+	    actions.moveToElement(b3);
+	    actions.click().build().perform();
+		
+		
+    		   
+       
+		
+		
+		
+		
+	
+		
+	}
+		
+}
+
+	
+

@@ -1,0 +1,13 @@
+1. create a variable x of byte data type and initialize value 10
+2. create a variable y of int data type and initialize value 100
+create a variable z of char data type and initialize value 10   ----   c
+
+
+class Test
+{
+  public static void main(String[] args)
+  {
+    byte x = 10;
+    System.out.println(x);
+ }
+		}

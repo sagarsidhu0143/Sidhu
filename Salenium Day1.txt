@@ -1,0 +1,39 @@
+Salenium Day1:
+------------------------
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Fristsale {
+
+	public static void main(String[] args)
+ {
+		System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver_win32\\chromedriver96.exe");
+		WebDriver driver = new ChromeDriver();
+		String url = "https://www.facebook.com/";
+		driver.get(url);
+		driver.manage().window().maximize();
+		String s  = driver.getTitle();
+		System.out.println(s);
+		System.out.println(s.length());
+		
+		String s1 = driver.getPageSource();
+		System.out.println(s1);
+		System.out.println(s1.length());
+		
+		String s2 = driver.getCurrentUrl();
+		System.out.println(s2);
+		
+		if(url.equals(s2))
+		{
+			System.out.println("ok");
+		}
+		else
+		{
+           System.out.println("not ok");			
+		}
+		
+		driver.close();
+}
+}
